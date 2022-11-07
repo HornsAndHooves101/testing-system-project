@@ -1,13 +1,16 @@
-# build frontend
+# rebuild frontend
 
+это нужно только после редактирования файлов фронтенда
 ```
-front$ npm run build
+front>
+npm run build
 ```
 
 # start app
 
 ```
-testing-system-project$ docker-compose up [-d] 
+testing-system-project>
+docker-compose up [-d]
 ```
 # test that these work
 
