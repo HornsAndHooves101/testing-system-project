@@ -7,6 +7,7 @@ front$ npm run build
 
 # Как подготовить бекенд к первому запуску (бек начинает отсюда)
 ```shell
+back$ pip install -r requirements.txt
 back$ python manage.py migrate
 back$ python manage.py createsuperuser
 ```
