@@ -1,19 +1,22 @@
-# rebuild frontend
+# Как пересобрать фронт после изменения файлов
 
-это нужно только после редактирования файлов фронтенда
-```
-front>
-npm run build
+это нужно только после редактирования файлов, для запуска системы не нужно (если существует папка `front/public`)
+```shell
+front$ npm run build
 ```
 
-# start app
+# Как запустить целиком бек+фронт
 
+```shell
+testing-system-project$ docker-compose up
 ```
-testing-system-project>
-docker-compose up [-d]
-```
-# test that these work
+опционально в конце добавить ключ `-d`
+
+
+# Проверь, что эти пути работают
 
 http://127.0.0.1:8000/api/tests/
+
 http://127.0.0.1:8000/
+
 http://127.0.0.1:8000/admin
