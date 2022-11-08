@@ -32,10 +32,10 @@ export const Header = () => {
           Tests
         </Link>
         <div style={{ flexGrow: 1 }} />
-        <a className="navLink" href="/admin">
+        <a className="navLink" href="/admin/">
           Admin
         </a>
-        <a className="navLink" href="/api">
+        <a className="navLink" href="/api/">
           API Root
         </a>
       </nav>
