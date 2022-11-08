@@ -1,0 +1,14 @@
+.navLink {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  &:not(.logo) {
+    padding: 8px 24px;
+    &:hover {
+      background: white;
+      color: #001529;
+    }
+  }
+}
