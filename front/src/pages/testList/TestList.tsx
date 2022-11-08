@@ -1,14 +1,26 @@
 import { List } from "antd";
+import { useEffect, useState } from "react";
+
+type Test = {
+  id: number;
+  name: string;
+};
 
 export const TestList = () => {
+  const [tests, setTests] = useState<Test[]>([]);
+
+  useEffect(() => {
+    fetch("/api/tests/").then(async (resp: Response) => {
+      const t = await resp.json();
+      setTests(t);
+    });
+  }, []);
+
   return (
     <List
       className="demo-loadmore-list"
       itemLayout="horizontal"
-      dataSource={[
-        { id: 1, name: "test1" },
-        { id: 2, name: "test2" },
-      ]}
+      dataSource={tests}
       renderItem={(item) => (
         <List.Item actions={[<a key="list-loadmore-edit">start</a>]}>
           <List.Item.Meta
