@@ -15,15 +15,19 @@ back$ python manage.py createsuperuser
 # Как запустить целиком бек+фронт
 
 ```shell
-testing-system-project$ docker-compose up
+testing-system-project$ docker-compose up -d
 ```
-опционально в конце добавить ключ `-d`
 
+# Как запустить целиком бек+фронт для разработки
+```shell
+front$ REACT_APP_PROXY=http://127.0.0.1:9000 npm run start
+back$ python manage.py runserver 127.0.0.1:9000
+```
 
 # Проверь, что эти пути работают
-
-http://127.0.0.1:8000/api/tests/
 
 http://127.0.0.1:8000/
 
 http://127.0.0.1:8000/admin
+
+http://127.0.0.1:8000/api/tests/
