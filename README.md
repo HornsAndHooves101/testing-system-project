@@ -1,11 +1,4 @@
-# Как пересобрать фронт после изменения файлов (фронт начинает отсюда)
-
-это нужно только после редактирования файлов, для запуска системы не нужно (если существует папка `front/build`)
-```shell
-front$ npm run build
-```
-
-# Как подготовить бекенд к первому запуску (бек начинает отсюда)
+# Как подготовить бекенд к первому запуску
 ```shell
 back$ pip install -r requirements.txt
 back$ python manage.py migrate
@@ -18,7 +11,7 @@ back$ python manage.py createsuperuser
 testing-system-project$ docker-compose up -d
 ```
 
-# Как запустить целиком бек+фронт для разработки
+# Как запустить целиком бек+фронт отдельно друг от друга
 ```shell
 front$ REACT_APP_PROXY=http://127.0.0.1:9000 npm run start
 back$ python manage.py runserver 127.0.0.1:9000
