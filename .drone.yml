@@ -1,0 +1,19 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run
+  commands:
+  - docker build -t testing-system .
+  - docker rm testing-system1 -f
+  - docker run -d --net=apps --restart=always --name testing-system1 testing-system:latest
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run
